@@ -175,6 +175,7 @@ public class Main {
 
 //Nupieškite kvadratą iš “*”, kurio kraštines sudaro 25“*”
 
+
     System.out.println("------------------------------");
     System.out.println("\nTrecia+ uzduotis:\n");
 
