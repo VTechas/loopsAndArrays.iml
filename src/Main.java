@@ -172,6 +172,7 @@ public class Main {
         }
         System.out.println(comma.substring(0,comma.length() -2));
 
+
 //Nupieškite kvadratą iš “*”, kurio kraštines sudaro 25“*”
 
     System.out.println("------------------------------");
