@@ -208,10 +208,71 @@ public class Main {
             System.out.println();
         }
 
+//Metam monetą. Monetos kritimo rezultatą imituojam Math.random() funkcija, kur 0 yra herbas, o 1 - skaičius.
+// Monetos metimo rezultatus išvedame į ekraną atskiroje eilutėje: “S” jeigu iškrito skaičius ir “H” jeigu herbas.
+// Suprogramuokite tris skirtingus scenarijus kai monetos metimą stabdome:
+//Iškritus herbui;
+//Tris kartus iškritus herbui;
+//Tris kartus iš eilės iškritus herbui;
 
+    System.out.println("------------------------------");
+    System.out.println("\nPenkta+ uzduotis:\n");
 
+        String heads = "";
+        String tails = "";
+        int min = 0;
+        int max = 1;
+        int coin = min + (int) Math.round( Math.random() * (max - min) );
 
+        while (coin != 0) {
+            tails += "S ";
+            coin = min + (int) Math.round( Math.random() * (max - min) );
+        }
+        heads += "H ";
 
+        System.out.println(tails.trim());
+        System.out.println(heads.trim());
+
+    System.out.println("-------------------------");
+    System.out.println("5.2\n");
+
+        int tailsCount = 0;
+        String heads2 = "";
+        String tails2 = "";
+
+        while (tailsCount < 3) {
+            int toss = (int) (Math.random() * 2);
+            if (toss == 1) {
+                tails2 += "H ";
+                tailsCount++;
+            } else {
+                heads2 += "S ";
+            }
+        }
+
+        System.out.println(heads2.trim());
+        System.out.println(tails2.trim());
+
+    System.out.println("-------------------------");
+    System.out.println("5.3\n");
+
+        int tailsInARow = 0;
+        String heads3 = "";
+        String tails3 = "";
+
+        while (tailsInARow < 3){
+            int toss = (int) (Math.random() * 2);
+            if (toss == 1) {
+                tails3 += "H ";
+                tailsInARow++;
+            } else {
+                heads3 += "S ";
+                tailsInARow = 0;
+            }
+        }
+
+        System.out.println(heads3.trim());
+        System.out.println(tails3.trim());
 
 
 
