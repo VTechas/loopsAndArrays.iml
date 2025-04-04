@@ -181,16 +181,32 @@ public class Main {
 
         int size = 25;
 
-        for (int y = 0; y < 25 ; y++){
-            for (int x = 0; x < 25 ; x++) {
+        for (int y = 0; y < size ; y++){
+            for (int x = 0; x < size ; x++) {
                 System.out.print("* ");
 
             }
             System.out.println();
         }
 
+//Prieš tai nupieštam kvadratui nupieškite istrižaines zaigzdutę pakeisdami kitu simboliu.
 
+    System.out.println("------------------------------");
+    System.out.println("\nKetvirta+ uzduotis:\n");
 
+        int size2 = 25;
+
+        for (int y = 0; y < size2 ; y++){
+            for (int x = 0; x < size2 ; x++) {
+                if (y == x || x == size2 - y - 1){
+                    System.out.print("@ ");
+                }
+                else {
+                    System.out.print("* ");
+                }
+            }
+            System.out.println();
+        }
 
 
 
