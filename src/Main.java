@@ -7,7 +7,7 @@ public class Main {
 
 //Sukurkite ciklą kuris atspausdintų 10 kartų žodį “labas”.
 
-    System.out.println("Pirma uzduotis:\n ");
+        System.out.println("Pirma uzduotis:\n ");
 
         for (int i = 0; i < 10; i++) {
             System.out.println("labas");
@@ -15,8 +15,8 @@ public class Main {
 
 //Sukurkite ciklą kuris atspausdintų skaičius nuo 0 iki 9.
 
-    System.out.println("------------------------------");
-    System.out.println("\nAntra uzduotis:\n");
+        System.out.println("------------------------------");
+        System.out.println("\nAntra uzduotis:\n");
 
         for (int i = 0; i < 10; i++) {
             System.out.println(i);
@@ -24,35 +24,35 @@ public class Main {
 
 //Sukurkite masyvą iš dešimties augalų pavadinimų.
 
-    System.out.println("------------------------------");
-    System.out.println("\nTrecia uzduotis:\n");
+        System.out.println("------------------------------");
+        System.out.println("\nTrecia uzduotis:\n");
 
         String[] plants = {"Agurkas", "Abrikosas", "Apelsinas", "Berzas", "Braske", "Brukne", "Citrina", "Dobilas", "Egle", "Gervuoge"};
 
 //Atspausdinkite kiekvieną 3čio uždavinio augalą atskiroje eilutėje.
 
-    System.out.println("------------------------------");
-    System.out.println("\nKetvirta uzduotis:\n");
+        System.out.println("------------------------------");
+        System.out.println("\nKetvirta uzduotis:\n");
 
-        for (int i = 0 ; i < 10; i++) {
+        for (int i = 0; i < 10; i++) {
             System.out.println(plants[i]);
         }
 
 //Atspausdinkite 3čio uždavinio kiekvieną augalą pradedant nuo paskutinio, ir baigiant pirmuoju. (atvirkščias ciklas).
 
-    System.out.println("------------------------------");
-    System.out.println("\nPenkta uzduotis:\n");
+        System.out.println("------------------------------");
+        System.out.println("\nPenkta uzduotis:\n");
 
-        for (int i = plants.length -1; i >= 0 ; i--) {
+        for (int i = plants.length - 1; i >= 0; i--) {
             System.out.println(plants[i]);
         }
 
 //Atspausdinkite kas antrą skaičių nuo 10 iki 50 (porinius)
 
-    System.out.println("------------------------------");
-    System.out.println("\nSesta uzduotis:\n");
+        System.out.println("------------------------------");
+        System.out.println("\nSesta uzduotis:\n");
 
-        for (int i = 10; i <= 50 ; i++) {
+        for (int i = 10; i <= 50; i++) {
             if (i % 2 == 0) {
                 System.out.println(i);
             }
@@ -61,13 +61,13 @@ public class Main {
 //Atspausdinkite kas antrą skaičių nuo 10 iki 50. (porinius) Jei skaičius dalinasi iš 10 be liekanos jo nespausdinkite.
 //( naudokite continue.) (atspausdinti visus porinus skaičius, išskyrus tuos kurie dalinasi iš 10 be liekanos)
 
-    System.out.println("------------------------------");
-    System.out.println("\nSeptinta uzduotis:\n");
+        System.out.println("------------------------------");
+        System.out.println("\nSeptinta uzduotis:\n");
 
-        for (int i = 10; i <= 50 ; i++) {
+        for (int i = 10; i <= 50; i++) {
             if (i % 2 == 0) {
                 if (i % 10 == 0) {
-                continue;
+                    continue;
                 }
                 System.out.println(i);
             }
@@ -75,22 +75,22 @@ public class Main {
 
 //Sukurkite ciklą kuris suktųsi nuo 0 iki 20. Suskaičiuokite, kiek kartų kintamasis i turėjo porinę reikšmę
 
-    System.out.println("------------------------------");
-    System.out.println("\nAstunta uzduotis:\n");
+        System.out.println("------------------------------");
+        System.out.println("\nAstunta uzduotis:\n");
 
         int even = 0;
 
-        for (int i = 0; i <= 20 ; i++) {
-            if (i % 2 ==0) {
-                even +=1;
+        for (int i = 0; i <= 20; i++) {
+            if (i % 2 == 0) {
+                even += 1;
             }
         }
         System.out.println(even);
 
 //Suskaičiuokite kiek 3čio uždavinio masyve yra žodžių trumpesnių nei 5 simboliai, ir kiek ilgesnių nei 7 simboliai. (du skaičiavimai)
 
-    System.out.println("------------------------------");
-    System.out.println("\nDevinta uzduotis:\n");
+        System.out.println("------------------------------");
+        System.out.println("\nDevinta uzduotis:\n");
 
         int less5 = 0;
         int more7 = 0;
@@ -100,10 +100,10 @@ public class Main {
             int wordLength = plants[i].length();
             System.out.println(wordLength);
 
-            if (wordLength < 5){
+            if (wordLength < 5) {
                 less5 += 1;
             }
-            if (wordLength > 7){
+            if (wordLength > 7) {
                 more7 += 1;
             }
 
@@ -114,8 +114,8 @@ public class Main {
 
 //Suskaičiuokite kiek 3čio uždavinio masyve yra žodžių ilgesnių nei 5 simboliai bet trumpesnių  nei 10 simboliai.(tarp 5 ir 10 simbolių ilgio)
 
-    System.out.println("------------------------------");
-    System.out.println("\nDesimta uzduotis:\n");
+        System.out.println("------------------------------");
+        System.out.println("\nDesimta uzduotis:\n");
 
         int fiveToTen = 0;
 
@@ -124,7 +124,7 @@ public class Main {
             int wordLength = plants[i].length();
             System.out.println(wordLength);
 
-            if (wordLength > 5 && wordLength < 10){
+            if (wordLength > 5 && wordLength < 10) {
                 fiveToTen += 1;
             }
         }
@@ -133,20 +133,18 @@ public class Main {
 //Sugeneruokite 300 atsitiktinių skaičių nuo 0 iki 300, atspausdinkite juos atskirtus tarpais ir suskaičiuokite kiek
 //tarp jų yra didesnių už 150.  Skaičiai didesni nei 275 turi būti atspausdinti skliausteliuose” [ ] “.
 
-    System.out.println("------------------------------");
-    System.out.println("\nPirma+ uzduotis:\n");
+        System.out.println("------------------------------");
+        System.out.println("\nPirma+ uzduotis:\n");
 
         Random rd = new Random();
         int[] randNumb = new int[300];
         int more = 0;
         for (int i = 0; i < 300; i++) {
             randNumb[i] = rd.nextInt(300);
-            if (randNumb[i] > 150)
-            {
+            if (randNumb[i] > 150) {
                 more += 1;
             }
-            if (randNumb[i] > 275)
-            {
+            if (randNumb[i] > 275) {
                 System.out.print("[" + randNumb[i] + "] ");
                 continue;
             }
@@ -158,31 +156,30 @@ public class Main {
 //Vienoje eilutėje atspausdinkite visus skaičius nuo 1 iki 3000, kurie dalijasi iš 77 be liekanos. Skaičius atskirkite
 //kableliais. Po paskutinio skaičiaus kablelio neturi būti.
 
-    System.out.println("------------------------------");
-    System.out.println("\nAntra+ uzduotis:\n");
+        System.out.println("------------------------------");
+        System.out.println("\nAntra+ uzduotis:\n");
 
-    String comma = "";
+        String comma = "";
 
-        for (int i = 1; i < 3001 ; i++) {
-            if (i % 77 == 0)
-            {
+        for (int i = 1; i < 3001; i++) {
+            if (i % 77 == 0) {
 
-               comma += i + ", ";
+                comma += i + ", ";
             }
         }
-        System.out.println(comma.substring(0,comma.length() -2));
+        System.out.println(comma.substring(0, comma.length() - 2));
 
 
 //Nupieškite kvadratą iš “*”, kurio kraštines sudaro 25“*”
 
 
-    System.out.println("------------------------------");
-    System.out.println("\nTrecia+ uzduotis:\n");
+        System.out.println("------------------------------");
+        System.out.println("\nTrecia+ uzduotis:\n");
 
         int size = 25;
 
-        for (int y = 0; y < size ; y++){
-            for (int x = 0; x < size ; x++) {
+        for (int y = 0; y < size; y++) {
+            for (int x = 0; x < size; x++) {
                 System.out.print("* ");
 
             }
@@ -191,17 +188,16 @@ public class Main {
 
 //Prieš tai nupieštam kvadratui nupieškite istrižaines zaigzdutę pakeisdami kitu simboliu.
 
-    System.out.println("------------------------------");
-    System.out.println("\nKetvirta+ uzduotis:\n");
+        System.out.println("------------------------------");
+        System.out.println("\nKetvirta+ uzduotis:\n");
 
         int size2 = 25;
 
-        for (int y = 0; y < size2 ; y++){
-            for (int x = 0; x < size2 ; x++) {
-                if (y == x || x == size2 - y - 1){
+        for (int y = 0; y < size2; y++) {
+            for (int x = 0; x < size2; x++) {
+                if (y == x || x == size2 - y - 1) {
                     System.out.print("@ ");
-                }
-                else {
+                } else {
                     System.out.print("* ");
                 }
             }
@@ -215,26 +211,26 @@ public class Main {
 //Tris kartus iškritus herbui;
 //Tris kartus iš eilės iškritus herbui;
 
-    System.out.println("------------------------------");
-    System.out.println("\nPenkta+ uzduotis:\n");
+        System.out.println("------------------------------");
+        System.out.println("\nPenkta+ uzduotis:\n");
 
         String heads = "";
         String tails = "";
         int min = 0;
         int max = 1;
-        int coin = min + (int) Math.round( Math.random() * (max - min) );
+        int coin = min + (int) Math.round(Math.random() * (max - min));
 
         while (coin != 0) {
             tails += "S ";
-            coin = min + (int) Math.round( Math.random() * (max - min) );
+            coin = min + (int) Math.round(Math.random() * (max - min));
         }
         heads += "H ";
 
         System.out.println(tails.trim());
         System.out.println(heads.trim());
 
-    System.out.println("-------------------------");
-    System.out.println("5.2\n");
+        System.out.println("-------------------------");
+        System.out.println("5.2\n");
 
         int tailsCount = 0;
         String heads2 = "";
@@ -253,14 +249,14 @@ public class Main {
         System.out.println(heads2.trim());
         System.out.println(tails2.trim());
 
-    System.out.println("-------------------------");
-    System.out.println("5.3\n");
+        System.out.println("-------------------------");
+        System.out.println("5.3\n");
 
         int tailsInARow = 0;
         String heads3 = "";
         String tails3 = "";
 
-        while (tailsInARow < 3){
+        while (tailsInARow < 3) {
             int toss = (int) (Math.random() * 2);
             if (toss == 1) {
                 tails3 += "H ";
@@ -281,8 +277,8 @@ public class Main {
 // Partijas kartoti tol, kol kažkuris žaidėjas pirmas surenka 222 arba daugiau taškų.
 
 
-    System.out.println("------------------------------");
-    System.out.println("\nSesta+ uzduotis:\n");
+        System.out.println("------------------------------");
+        System.out.println("\nSesta+ uzduotis:\n");
 
         int minP = 10;
         int maxP = 20;
@@ -293,8 +289,8 @@ public class Main {
         int totalK = 0;
 
         while (totalP <= 222 || totalK <= 222) {
-            int pointsP = minP + (int) Math.round( Math.random() * ( maxP - minP ));
-            int pointsK = minK + (int) Math.round( Math.random() * ( maxK - minK ));
+            int pointsP = minP + (int) Math.round(Math.random() * (maxP - minP));
+            int pointsK = minK + (int) Math.round(Math.random() * (maxK - minK));
 
             if (totalP < 222 && totalK < 222) {
                 totalP += pointsP;
@@ -308,8 +304,7 @@ public class Main {
                     System.out.println("Petras surinko " + pointsP + " tasku, is viso: " + totalP + ". Kazys surinko " + pointsK + " tasku, is viso: " + totalK + ". Lygiosios.");
                 }
 
-            }
-            else {
+            } else {
                 break;
             }
         }
@@ -317,11 +312,44 @@ public class Main {
             System.out.println("Zaidima laimejo: Petras su " + totalP + " tasku.");
         } else if (totalK > totalP) {
             System.out.println("Zaidima laimejo: Kazys su " + totalK + " tasku.");
-        }
-        else {
+        } else {
             System.out.println("Zaidimas baigesi lygiosiomis.");
         }
 
+//Reikia nupaišyti pilnavidurį rombą, taip pat, kaip ir pilnavidurį kvadratą, kurio aukštis 21 eilutė.
+
+        System.out.println("------------------------------");
+        System.out.println("\nSeptinta+ uzduotis:\n");
+
+        int size3 = 21;
+
+        for (int y = 0; y < size3; y++) {
+            int spaces = Math.abs(size3 / 2 - y);
+            int rhombus = size3 - 2 * spaces;
+
+            for (int x = 0; x < spaces; x++) {
+                System.out.print(" ");
+            }
+
+            for (int a = 0; a < rhombus; a++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+
+    int size4 = 21;
+
+        for(int y = 0; y<size4; y++)
+
+    {
+        for (int x = 0; x < size4; x++) {
+            System.out.print("* ");
+
+        }
+        System.out.println();
+    }
+
 
     }
-        }
+}
