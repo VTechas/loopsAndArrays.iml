@@ -275,6 +275,53 @@ public class Main {
         System.out.println(tails3.trim());
 
 
+//Kazys ir Petras žaidžia šaškėm. Petras surenka taškų kiekį nuo 10 iki 20, Kazys surenka taškų kiekį nuo 5 iki 25.
+// Vienoje eilutėje išvesti žaidėjų vardus su taškų kiekiu ir “Partiją laimėjo: laimėtojo vardas”.
+// Taškų kiekį generuokite funkcija Math.random(). Žaidimą laimi tas, kas greičiau surenka 222 taškus.
+// Partijas kartoti tol, kol kažkuris žaidėjas pirmas surenka 222 arba daugiau taškų.
+
+
+    System.out.println("------------------------------");
+    System.out.println("\nSesta+ uzduotis:\n");
+
+        int minP = 10;
+        int maxP = 20;
+        int totalP = 0;
+
+        int minK = 5;
+        int maxK = 25;
+        int totalK = 0;
+
+        while (totalP <= 222 || totalK <= 222) {
+            int pointsP = minP + (int) Math.round( Math.random() * ( maxP - minP ));
+            int pointsK = minK + (int) Math.round( Math.random() * ( maxK - minK ));
+
+            if (totalP < 222 && totalK < 222) {
+                totalP += pointsP;
+                totalK += pointsK;
+
+                if (pointsP > pointsK) {
+                    System.out.println("Petras surinko " + pointsP + " tasku, is viso: " + totalP + ". Kazys surinko " + pointsK + " tasku, is viso: " + totalK + ". Partija laimejo Petras.");
+                } else if (pointsK > pointsP) {
+                    System.out.println("Petras surinko " + pointsP + " tasku, is viso: " + totalP + ". Kazys surinko " + pointsK + " tasku, is viso: " + totalK + ". Partija laimejo Kazys.");
+                } else {
+                    System.out.println("Petras surinko " + pointsP + " tasku, is viso: " + totalP + ". Kazys surinko " + pointsK + " tasku, is viso: " + totalK + ". Lygiosios.");
+                }
 
             }
+            else {
+                break;
+            }
+        }
+        if (totalP > totalK) {
+            System.out.println("Zaidima laimejo: Petras su " + totalP + " tasku.");
+        } else if (totalK > totalP) {
+            System.out.println("Zaidima laimejo: Kazys su " + totalK + " tasku.");
+        }
+        else {
+            System.out.println("Zaidimas baigesi lygiosiomis.");
+        }
+
+
+    }
         }
