@@ -338,6 +338,8 @@ public class Main {
         }
 
 
+        System.out.println("\n");
+
     int size4 = 21;
 
         for(int y = 0; y<size4; y++)
@@ -349,6 +351,70 @@ public class Main {
         }
         System.out.println();
     }
+
+//Sumodeliuokite vinies kalimą. Įkalimo gylį sumodeliuokite pasinaudodami Math.random() funkcija.
+//Vinies ilgis 8.5cm (pilnai sulenda į lentą).
+//a)“Įkalkite” 5 vinis mažais smūgiais. Vienas smūgis vinį įkala 5-20 mm. Suskaičiuokite kiek reikia smūgių.
+//b)“Įkalkite” 5 vinis dideliais smūgiais. Vienas smūgis vinį įkala 20-30 mm, bet yra 50% tikimybė
+//(pasinaudokite Math.random() funkcija tikimybei sumodeliuoti), kad smūgis nepataikys į vinį.
+//Suskaičiuokite kiek reikia smūgių.
+
+    System.out.println("------------------------------");
+    System.out.println("\nAstunta+ uzduotis:\n");
+
+    int fullLength = 85;
+    int smallMin = 5;
+    int smallMax= 20;
+    int smallTotalCount = 0;
+
+        for (int i = 1; i < 6; i++) {
+            int smallTotal = 0;
+            int smallCount = 0;
+            while (smallTotal < fullLength) {
+                int small = smallMin + (int) Math.round((Math.random() * (smallMax - smallMin)));
+                smallTotal += small;
+                smallCount++;
+                System.out.print(small + " ");
+            }
+            smallTotalCount += smallCount;
+            System.out.println("\n" + i + "aja lenta ikaleme is: " + smallCount + " smugiu.");
+
+        }
+
+        System.out.println("\nPenkias lentas ikaleme per: " + smallTotalCount + " smugiu." );
+        System.out.println("------------------------------");
+
+        int longMin = 20;
+        int longMax = 30;
+        long longTotalCount = 0;
+
+        for (int i = 1; i < 6; i++) {
+            int longTotal = 0;
+            int longCount = 0;
+            while (longTotal < fullLength) {
+                int min5 = 0;
+                int max5 = 1;
+                int chance = min5 + (int) Math.round(Math.random() * (max5 - min5));
+                if (chance == 1) {
+                    int longN = longMin + (int) Math.round((Math.random() * (longMax - longMin)));
+                    longTotal += longN;
+                    longCount++;
+                    System.out.print(longN + " ");
+                } else {
+                    System.out.print("0 ");
+                    longCount++;
+                }
+            }
+            longTotalCount += longCount;
+            System.out.println("\n" + i + "aja lenta ikaleme is: " + longCount + " smugiu.");
+
+        }
+
+        System.out.println("\nPenkias lentas ikaleme per: " + longTotalCount + " smugiu." );
+
+
+
+
 
 
     }
