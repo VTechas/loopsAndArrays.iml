@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Random;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -381,7 +382,7 @@ public class Main {
 
         }
 
-        System.out.println("\nPenkias lentas ikaleme per: " + smallTotalCount + " smugiu." );
+        System.out.println("\nPenkias lentas mazais smugiais ikaleme per: " + smallTotalCount + " smugiu." );
         System.out.println("------------------------------");
 
         int longMin = 20;
@@ -410,8 +411,78 @@ public class Main {
 
         }
 
-        System.out.println("\nPenkias lentas ikaleme per: " + longTotalCount + " smugiu." );
+        System.out.println("\nPenkias lentas dideliais smugiais ikaleme per: " + longTotalCount + " smugiu." );
 
+//Sugeneruokite stringą, kurį sudarytų 50 atsitiktinių skaičių nuo 1 iki 200, atskirtų tarpais. Skaičiai turi būti
+//unikalūs (t.y. nesikartoti). Sugeneruokite antrą stringą, pasinaudodami pirmu, palikdami jame tik pirminius skaičius
+//(t.y tokius, kurie dalinasi be liekanos tik iš 1 ir patys savęs). Skaičius stringe sudėliokite didėjimo tvarka,
+//nuo mažiausio iki didžiausio. (reikės split() funkcijos ir masyvų.)
+
+    System.out.println("------------------------------");
+    System.out.println("\nDevinta+ uzduotis:\n");
+
+
+        int[] uniques = new int[50];                     //sukuriam masyva skaiciam
+        int min6 = 1;
+        int max6 = 200;
+        int count = 0;                                       //unikalus skaiciai
+
+        while (count < 50) {
+            int num = min6 + (int) Math.round(Math.random() * (max6 - min6));
+
+            boolean isUnique = true;                        //galvojam kad skaicius yra unikalus
+            for (int i = 0; i < count; i++) {                //loopinam per visus pries tai sugeneruotus skaicius
+                if (uniques[i] == num) {                     //tikrinam ar skaicius jau yra masyve
+                    isUnique = false;                         //pazymim kad ne unikalus
+                    break;                                     //iseinam is ciklo nes radom skaicius kuris pasikartoja
+                }
+            }
+
+            if (isUnique) {                               //jeigu unikalus idedam i masyva
+                uniques[count] = num;                     //idedam skaiciu i dabartini indeksa
+                count++;
+            }
+        }
+
+        Arrays.sort(uniques);                                     //sutvarkom masyva didejimo tvarka
+
+        String result = "";                                       //sukuriam nauja string kuriame bus skaiciai su tarpais
+        for (int i = 0; i < uniques.length; i++) {                //cikluojam per kiekviena elementa sutvarkytam masyve
+            result += uniques[i] + " ";                      //pridedam kiekviena skaiciu atskirtu su tarpu i stringa
+        }
+
+        String[] splitNumbers = result.split("\\s+");              //atskiriam vienu ar dviem tarpais
+        System.out.println("Pirmo masyvo skaiciai didejimo tvarka: ");
+        System.out.println(String.join(" ", splitNumbers));          //spausdinam surusiuotus skaicius vienoje eiluteje
+
+        int[] numbers = new int[splitNumbers.length];              //sukuriam masyva is sveiku skaiciu tokio pacio ilgio kaip string
+        for (int i = 0; i < splitNumbers.length; i++) {             //cikluojam per string masyva
+            numbers[i] = Integer.parseInt(splitNumbers[i]);       //konvertuojam kiekviena string i sveika skaiciu ir idedam i skaiciu masyva
+        }
+
+        StringBuilder primes = new StringBuilder();               //sukuriam StringBuilder kad laikytu pirminius skaicius
+        for (int num : numbers) {                             //cikluojam per kiekviena skaiciu is skaiciu masyvo
+            if (num <= 1) continue;                              //praleidziam skaicius maziau arba lygu 1, jie ne priminiai
+            if (num == 2 || num == 3) {                          //"special case" 2 ir 3 yra pirminiai skaiciai
+                primes.append(num).append(" ");                   //pridedam pirmini skaiciu i primes StringBuilder gala
+                continue;                                                     //pereinam prie kito skaiciaus
+            }
+            if (num % 2 == 0 || num % 3 == 0) continue;                   //praleidziam skaicius kurie dalinasi is 2 ar 3
+
+            //skaiciams didesniems nei 3, patikrinam dalyba pagal 6k+1 ar 6k-1 forma (tikrinti pirminiams skaiciams)
+
+            boolean isPrime = true;                                     //galvojam kad skaicius pirminis
+            for (int i = 5; i * i <= num ; i += 6) {                    //cikluojam nuo 5 iki skaiciaus saknies tikrinant 6k+-1
+                if (num % i == 0 || num % (i + 2) == 0) {               //jeigu skaicius dalinasi is i arba i+2 nera pirminis
+                    isPrime = false;                                    //pazymim kad ne pirminis
+                    break;                                              //iseinam is ciklo nes radom kazkokia dalyba
+                }
+            }
+            if (isPrime) {                              //jeigu skaicius pirminis
+                primes.append(num).append(" ");             //pridedam i primes StringBuilder gala
+            }
+        }
+        System.out.println("Pirminiai skaiciai:\n" + primes.toString().trim());
 
 
 
